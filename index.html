@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#dff5fb">
+  <meta name="description" content="福岡市内・糸島・北九州・佐賀まで、わざわざ行きたい人気のかき氷店12店を紹介するガイドです。">
+  <title>福岡・近隣 おすすめかき氷店ガイド</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data/shops.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#shop-list">店舗一覧へ移動</a>
+
+  <header class="hero">
+    <nav class="hero-nav shell" aria-label="ページ内メニュー">
+      <a class="brand" href="#top" aria-label="ページトップへ"><span aria-hidden="true">氷</span> KAKIGORI GUIDE</a>
+      <div class="hero-actions no-print">
+        <button class="quiet-button" id="share-button" type="button">共有する</button>
+        <button class="primary-button" id="print-button" type="button">PDF・印刷</button>
+      </div>
+    </nav>
+
+    <div class="hero-grid shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">FUKUOKA &amp; NEARBY · SUMMER 2026</p>
+        <h1>福岡・近隣<br><span>おすすめかき氷店</span>ガイド</h1>
+        <p class="hero-lead">福岡市内・糸島・北九州・佐賀まで、<br class="desktop-only">わざわざ行きたい人気店を厳選。</p>
+        <div class="hero-meta" aria-label="ガイドの概要">
+          <span><b>12</b> 店舗</span><span><b>5</b> エリア</span><span><b>2026.07</b> 更新</span>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/images/kakigori-hero.png" alt="いちご、桃、マンゴーを飾った涼しげなかき氷" width="1536" height="1024">
+        <figcaption>このサイトのために作成したオリジナルイメージ</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro shell" aria-labelledby="intro-title">
+      <div>
+        <p class="section-kicker">ABOUT THIS GUIDE</p>
+        <h2 id="intro-title">次の休日、どの一杯を目指す？</h2>
+      </div>
+      <div class="intro-copy">
+        <p>福岡市内を中心に、糸島、北九州、福岡県南部、佐賀まで。味や素材はもちろん、お店の雰囲気やドライブして行く楽しさも含めて、友人におすすめしたくなる店を選びました。</p>
+        <p class="notice"><span aria-hidden="true">◎</span><b>お出かけ前に</b><br>季節限定・不定休・予約制・数量限定の店があります。必ず公式サイトや公式Instagramで最新の営業情報をご確認ください。</p>
+      </div>
+    </section>
+
+    <section class="favorites-section shell" aria-labelledby="top-five-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">EDITOR'S PICKS</p><h2 id="top-five-title">まず行きたい、注目の5店</h2></div>
+        <p>迷ったらここから。個性、素材、旅の楽しさで選んだ本命リストです。</p>
+      </div>
+      <div class="top-five" id="top-five"></div>
+    </section>
+
+    <section class="guide shell" aria-labelledby="all-shops-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">FIND YOUR FAVORITE</p><h2 id="all-shops-title">気分で探す、12のかき氷店</h2></div>
+        <p id="results-status" role="status" aria-live="polite">12店を表示中</p>
+      </div>
+
+      <div class="controls no-print" aria-label="店舗の絞り込み">
+        <label class="search-box" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">キーワード検索</span>
+          <input id="search-input" type="search" placeholder="店名・地域・特徴・タグで検索" autocomplete="off">
+        </label>
+        <div class="filter-row" id="area-filters" role="group" aria-label="地域で絞り込む"></div>
+        <button class="favorite-filter" id="favorite-filter" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> 行きたい店だけ</button>
+      </div>
+
+      <div class="shop-grid" id="shop-list"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">🍧</span>
+        <h3>条件に合うお店がありません</h3>
+        <p>検索語や地域フィルターを変えてみてください。</p>
+        <button class="quiet-button" id="reset-button" type="button">絞り込みをリセット</button>
+      </div>
+    </section>
+
+    <section class="trip-note shell" aria-labelledby="trip-note-title">
+      <div><p class="section-kicker">GOOD TO KNOW</p><h2 id="trip-note-title">おいしい寄り道のために</h2></div>
+      <div class="note-grid">
+        <article><span>01</span><h3>営業日を確認</h3><p>不定期営業や予約優先の店は、当日の公式投稿までチェック。</p></article>
+        <article><span>02</span><h3>暑さ対策も忘れずに</h3><p>行列に備えて、飲み物や日傘を。売り切れ前の早めの来店がおすすめ。</p></article>
+        <article><span>03</span><h3>ドライブとセットで</h3><p>糸島、柳川、門司港、神埼、呼子は周辺観光と組み合わせると一日旅に。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div><p class="footer-brand">FUKUOKA KAKIGORI GUIDE</p><p>ひんやり、おいしい、夏の行き先。</p></div>
+      <p>掲載情報は2026年7月18日時点の確認内容です。<br>最新情報は各店舗の公式発信をご確認ください。</p>
+    </div>
+  </footer>
+
+  <button class="to-top no-print" id="to-top" type="button" aria-label="ページ上部へ戻る">↑</button>
+  <div class="toast no-print" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
