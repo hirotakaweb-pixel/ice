@@ -139,9 +139,11 @@ h2 { margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-si
 .link-button { display: inline-flex; align-items: center; gap: 7px; min-height: 40px; padding: 8px 12px; text-decoration: none; font-size: 12px; }
 .link-button.map { color: white; border-color: var(--blue); background: var(--blue); }
 .link-icon { position: relative; display: inline-block; flex: 0 0 auto; width: 15px; height: 15px; }
-.instagram-icon { border: 1.7px solid currentColor; border-radius: 4px; }
-.instagram-icon::before { content: ""; position: absolute; inset: 3px; border: 1.5px solid currentColor; border-radius: 50%; }
-.instagram-icon::after { content: ""; position: absolute; top: 2px; right: 2px; width: 2.5px; height: 2.5px; border-radius: 50%; background: currentColor; }
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  background: url("assets/instagram-icon.png") center / contain no-repeat;
+}
 .map-icon { width: 13px; height: 13px; margin: -3px 1px 2px; border: 1.8px solid currentColor; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
 .map-icon::after { content: ""; position: absolute; top: 3px; left: 3px; width: 3px; height: 3px; border: 1.2px solid currentColor; border-radius: 50%; }
 .empty-state { padding: 70px 20px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); background: white; }
