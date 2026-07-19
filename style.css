@@ -144,8 +144,12 @@ h2 { margin: 0; font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; font-si
   height: 20px;
   background: url("assets/instagram-icon.png") center / contain no-repeat;
 }
-.map-icon { width: 13px; height: 13px; margin: -3px 1px 2px; border: 1.8px solid currentColor; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); }
-.map-icon::after { content: ""; position: absolute; top: 3px; left: 3px; width: 3px; height: 3px; border: 1.2px solid currentColor; border-radius: 50%; }
+.map-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: url("assets/google-maps-icon.png") center / contain no-repeat;
+}
 .empty-state { padding: 70px 20px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); background: white; }
 .empty-state > span { font-size: 46px; }
 .empty-state h3 { margin: 12px 0 0; }
