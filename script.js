@@ -47,7 +47,12 @@
 
   function externalLink(url, label, className = "") {
     if (!url) return "";
-    return `<a class="link-button ${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} ↗</a>`;
+    const icon = className === "instagram"
+      ? '<span class="link-icon instagram-icon" aria-hidden="true"></span>'
+      : className === "map"
+        ? '<span class="link-icon map-icon" aria-hidden="true"></span>'
+        : "";
+    return `<a class="link-button ${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${icon}<span>${escapeHtml(label)} ↗</span></a>`;
   }
 
   function mapUrl(shop) {
@@ -75,7 +80,7 @@
           <div class="tags" aria-label="ジャンル">${tags}</div>
           <div class="card-links">
             ${externalLink(shop.officialUrl, "公式サイト")}
-            ${externalLink(shop.instagramUrl, "Instagram")}
+            ${externalLink(shop.instagramUrl, "Instagram", "instagram")}
             ${externalLink(mapUrl(shop), "Googleマップ", "map")}
           </div>
         </div>
